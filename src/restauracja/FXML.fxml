@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Projekt stworzony przez
+Pawel Ruminkiewicz
+Nr indeksu: 127212
+-->
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="729.0" prefWidth="1025.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restauracja.FXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="48.0" layoutX="625.0" layoutY="671.0" stroke="#ffffff00" strokeType="INSIDE" width="384.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e4e4e4" height="95.0" layoutX="626.0" layoutY="69.0" stroke="#ffffff00" strokeType="INSIDE" width="384.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e7275" height="41.0" layoutX="16.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="996.0" />
+      <Button fx:id="przyciskNowegoZamowienia" disable="true" layoutX="637.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#noweZamowienie" prefHeight="30.0" prefWidth="189.0" text="3. Nowe zamówienie" />
+      <Button fx:id="przyciskNowegoKlienta" disable="true" layoutX="851.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#nowyKlient" prefHeight="30.0" prefWidth="151.0" text="2 Nowy klient" />
+      <Button fx:id="przyciskNowegoDostawcy" disable="true" layoutX="851.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#nowyDostawca" prefHeight="30.0" prefWidth="151.0" text="4. Nowy dostawca" />
+      <Button id="przyciskNowegoPosilku" fx:id="przyciskNowegoPosilku" layoutX="637.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#nowyPosilekDoMenu" prefHeight="30.0" prefWidth="189.0" text="1. Nowy posiłek do karty MENU" wrapText="true" />
+      <Label layoutX="377.0" layoutY="23.0" prefHeight="30.0" prefWidth="272.0" text="Symulator Restauracji 1.0" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="poleInformacyjne" layoutX="625.0" layoutY="203.0" prefHeight="468.0" prefWidth="384.0" />
+      <AnchorPane fx:id="mapaMiasta" layoutX="14.0" layoutY="117.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #fff; -fx-border-color: #000;">
+         <children>
+            <ImageView fitHeight="16.0" fitWidth="16.0" focusTraversable="true" layoutX="284.0" layoutY="284.0" onMouseClicked="#listaZamowienRestauracji" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ikony/restauracja.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="przyciskUsuniecia" disable="true" layoutX="893.0" layoutY="680.0" mnemonicParsing="false" onMouseClicked="#usunElement" prefHeight="30.0" prefWidth="107.0" text="Usuń element" />
+      <Button fx:id="przyciskOdswiezenia" disable="true" layoutX="778.0" layoutY="680.0" mnemonicParsing="false" onMouseClicked="#odswiezWidok" prefHeight="30.0" prefWidth="97.0" text="Odśwież" />
+      <Button fx:id="przyciskPowrotuDoRestauracji" disable="true" layoutX="631.0" layoutY="680.0" mnemonicParsing="false" onMouseClicked="#powrotDoRestauracji" prefHeight="30.0" prefWidth="131.0" text="Powrót do restauracji" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e7275" height="48.0" layoutX="14.0" layoutY="69.0" stroke="#ffffff00" strokeType="INSIDE" width="600.0" />
+      <Button fx:id="przyciskWczytywania" layoutX="25.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#wczytajStan" prefHeight="25.0" prefWidth="282.0" text="Wczytaj stan aplikacji" />
+      <Button fx:id="przyciskZapisu" layoutX="321.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#zapiszStan" prefHeight="25.0" prefWidth="282.0" text="Zapisz stan aplikacji" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#868686" height="41.0" layoutX="625.0" layoutY="165.0" stroke="TRANSPARENT" strokeType="INSIDE" width="384.0" />
+      <Text fill="WHITE" layoutX="664.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacje o wybranym obiekcie">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

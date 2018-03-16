@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Projekt stworzony przez
+${licensePrefix}Pawel Ruminkiewicz
+${licensePrefix}Nr indeksu: 127212
+<#if licenseLast??>
+${licenseLast}
+</#if>
